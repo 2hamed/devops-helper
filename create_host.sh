@@ -47,7 +47,7 @@ cp templates/php-pool.tpl.conf $phpPoolRoute/$userName.conf
 sed -i "s/{username}/$userName/g" $phpPoolRoute/$userName.conf
 sed -i "s/{poolname}/$userName/g" $phpPoolRoute/$userName.conf
 
-if [ "$sysType"="L" ];
+if [ "$sysType"=="l" ];
 then
     cp templates/nginx.laravel.tpl.conf $nginxDefRoute/sites-available/$userName.conf
     ln -s $nginxDefRoute/sites-available/$userName.conf $nginxDefRoute/sites-enabled/$userName.conf
